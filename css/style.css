@@ -1,0 +1,402 @@
+/*global styles*/
+:root {
+  --mainColor: rgb(31 182 252);
+  --secondColor: #6f42c1;
+  --textColor: rgb(136 135 158);
+  --bgColor: #7d64da;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+  text-transform: capitalize;
+}
+section {
+  margin-bottom: 50px;
+}
+button {
+  border: none !important;
+}
+.active {
+  display: block;
+}
+.inActive {
+  display: none;
+}
+/*NAVBAR STYLE ###################*/
+.navbar {
+  padding: 10px;
+  width: 100%;
+  height: 60px;
+  background-color: #7355d8;
+  position: fixed;
+  z-index: 999;
+  top: 0px;
+  left: 0px;
+}
+.navbar ul li {
+  margin: 5px;
+}
+.navbar ul li a {
+  color: #fff !important;
+}
+.navbar ul li:hover a {
+  color: var(--mainColor) !important;
+}
+.navbar .navbar-collapse {
+  display: block;
+  text-align: center;
+  width: 100%;
+  transition: all 0.6s linear;
+  margin-top: -110%;
+}
+.navbarCollapseIsActive {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 30px 0px 30px 30px;
+  margin-top: 25px !important;
+}
+@media (min-width: 660px) {
+  .navbar .navbar-collapse {
+    background-color: transparent;
+    border-radius: 0px;
+    margin-top: auto;
+  }
+}
+/*NAVBAR STYLE ###################*/
+/*search-box STYLE ###################*/
+#search-box {
+  position: fixed;
+  top: -100%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  transition: all 0.6s linear;
+}
+#search-box form input {
+  height: 40px;
+  width: 250px;
+  background-color: transparent;
+  border: 2px solid var(--mainColor);
+  border-right: none;
+  float: left;
+  padding: 5px;
+  border-radius: 20px 0px 0px 20px;
+  color: #fff;
+  outline: none;
+}
+
+#search-box .row > div:first-of-type {
+  margin: 25px auto;
+  text-align: center;
+}
+#search-box .row > div:last-of-type {
+  margin: 200px auto;
+  text-align: center;
+}
+#search-box a {
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+#search-box form button {
+  height: 40px;
+  width: 80px;
+  background-color: var(--mainColor);
+  color: #fff;
+  border-radius: 0px 30px 30px 0px;
+  float: left;
+}
+/*search-box STYLE ###################*/
+
+/*BANNER STYLE ###########################*/
+section.banner {
+  position: relative;
+  background-color: #7355d8;
+  height: 780px;
+  padding-top: 150px;
+  color: #fff;
+}
+section.banner::before {
+  content: "";
+  height: 400px;
+  width: 250px;
+  display: block;
+  border-radius: 0px 0px 250px 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: var(--bgColor);
+}
+section.banner::after {
+  content: "";
+  height: 400px;
+  width: 250px;
+  display: block;
+  border-radius: 300px 0px 0px 0px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  background-color: var(--bgColor);
+}
+section.banner button {
+  height: 50px;
+  padding: 0px 10px;
+  border-radius: 30px 30px 30px 0px;
+  background-color: var(--mainColor);
+  color: #fff;
+}
+section.banner .row > div {
+  margin-bottom: 25px;
+}
+section.banner .row > div > img {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+section.banner ul {
+  margin-top: 25px;
+}
+section.banner ul li {
+  list-style: none;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  border-radius: 20px 20px 20px 0px;
+  border: 1.5px solid #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+}
+section.banner ul li a {
+  color: #fff;
+}
+
+/*BANNER STYLE ###########################*/
+/*SRVICES STYLE ###########################*/
+.service .container > .row:first-of-type > div:first-of-type {
+  margin-bottom: 25px;
+  padding: 10px;
+}
+.service .container > .row:first-of-type > div:first-of-type button {
+  padding: 5px 10px;
+  height: 50px;
+  background-color: var(--mainColor);
+  color: #fff;
+  border-radius: 30px 30px 30px 0px;
+}
+.service p {
+  color: var(--textColor);
+}
+.service .row > div > div.row > div > div {
+  padding: 10px;
+  padding-left: 20px;
+  margin: 5px;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 2px #ccc, -1px -1px 2px #ccc;
+  border-radius: 20px 20px 20px 0px;
+}
+
+.service .row > div > div > header {
+  height: 40px;
+  width: 40px;
+  background-color: var(--mainColor);
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 20px 20px 20px 0px;
+  margin-bottom: 10px;
+}
+.service .row > div > div.row > div > div h4 {
+  font-size: 18px;
+}
+/*SERVICES STYLE ###########################*/
+/*STATISTICS STYLE ###########################*/
+.statistics {
+  margin-top: 50px;
+  text-align: center;
+}
+.statistics .row {
+  margin: 0px;
+  border-radius: 30px 30px 30px 0px;
+  box-shadow: 1px 1px 2px #ccc, -1px -1px 2px #ccc;
+  padding: 10px;
+}
+.statistics .row > div > div {
+  padding: 25px;
+}
+
+.statistics .row > div > div i {
+  font-size: 20px;
+  background-color: var(--bgColor);
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  line-height: 40px;
+  border-radius: 30px 30px 30px 0px;
+}
+.statistics .row > div > div h2 {
+  margin: 10px auto;
+  color: var(--mainColor);
+}
+.statistics .row > div > div h5 {
+  font-size: 16px;
+  color: var(--textColor);
+}
+
+/*STATISTICS STYLE ###########################*/
+/*ABOUT STYLE ###########################*/
+.about {
+  margin-top: 50px;
+}
+.about .row > div {
+  margin-bottom: 25px;
+}
+.about img {
+  height: 100%;
+  width: 100%;
+}
+.about h3 {
+  margin-top: 25px;
+}
+.about p {
+  color: var(--textColor);
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+.about button {
+  display: block;
+  height: 50px;
+  padding: 10px;
+  color: #fff;
+  background-color: var(--mainColor);
+  border-radius: 30px 30px 30px 0px;
+}
+/*ABOUT STYLE ###########################*/
+/*TEAM STYLE ###########################*/
+.team {
+  margin: 50px auto;
+}
+.team .row {
+  padding: 0px;
+  margin: 0px;
+}
+.team .row > div {
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.team .row > div > div {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+}
+.team .row .backend {
+  position: absolute;
+  left: 0px;
+  top: -100%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: all 0.8s linear;
+  border-radius: 0px 30px 30px;
+}
+.team .row > div :hover div.backend {
+  top: 0%;
+  opacity: 1;
+}
+.team .row .backend ul li {
+  list-style: none;
+  display: block;
+  height: 40px;
+  width: 40px;
+  margin: 25px auto;
+  background-color: var(--mainColor);
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  border-radius: 30px 30px 30px 0px;
+}
+.team .row .front {
+  padding: 10px;
+}
+.team .row .front > img {
+  width: 100%;
+  height: 350px;
+  margin-bottom: 10px;
+}
+.team .row .front h6 {
+  color: var(--textColor);
+  font-size: 14px !important;
+  margin-top: 10px;
+}
+/*TEAM STYLE ###########################*/
+/*TESTIMONIALS STYLE ###########################*/
+section.testimonial {
+  margin-top: 50px;
+}
+section.testimonial h3,
+section.testimonial p {
+  margin-bottom: 25px;
+}
+section.testimonial p {
+  color: var(--textColor);
+}
+section.testimonial .row > div {
+  margin-bottom: 50px;
+}
+section.testimonial .row > div > div {
+  padding: 20px;
+  border-radius: 30px 30px 30px 0px;
+  box-shadow: 1px 1px 1px 2px #ccc, -1px -1px 2px #ccc;
+}
+section.testimonial .row > div > div i {
+  height: 40px;
+  width: 40px;
+  background-color: var(--mainColor);
+  text-align: center;
+  line-height: 40px;
+  border-radius: 30px 30px 30px 0px;
+  color: #fff;
+  position: relative;
+  left: calc(50% - 40px / 2);
+  top: -40px;
+}
+section.testimonial .row > div > div img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+section.testimonial .row > div > div h6 {
+  color: var(--mainColor);
+}
+/*TESTIMONIALS STYLE ###########################*/
+/*footer STYLE ###########################*/
+.footer {
+  padding: 25px;
+  background-color: #333;
+  margin: 0px;
+  text-align: center;
+  color: #fff;
+}
+.footer ul li {
+  display: inline-block;
+  list-style: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  background-color: #000;
+}
+/*footer STYLE ###########################*/
